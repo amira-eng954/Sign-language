@@ -16,8 +16,8 @@ return new class extends Migration
             $table->text('c_message');
             $table->string('name');
             $table->string('phone');
-           
-            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->string('user_id');
+            //$table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

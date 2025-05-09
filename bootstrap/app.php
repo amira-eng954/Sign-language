@@ -13,7 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
          $middleware->alias([
-            'apiAuth'=>"App\Http\Middleware\ApiAuth::class"
+            'apiAuth'=>"App\Http\Middleware\ApiAuth::class",
+             'firebase' => "App\Http\Middleware\FirebaseAuth::class"
+
          ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
