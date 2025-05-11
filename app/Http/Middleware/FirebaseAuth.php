@@ -9,7 +9,7 @@ use Kreait\Laravel\Firebase\Facades\Firebase;
 class FirebaseAuth
 {
     public function handle(Request $request, Closure $next)
-    {//fCTX8EzKQruws-eVydie4W:APA91bEsZ9AR_2gcmecZkMVLFUVBVJ4A6E_tunT8zXowOXoM3LG40KuFVo0oEoMyFxgK6N1iWbMfm9j1310Wzasd47ls5Hqirm8eW6VZ3PKrZ8Jee9rAZWM
+    {
         $idToken = $request->bearerToken(); // جاي من Authorization: Bearer <token>
 
         if (!$idToken) {

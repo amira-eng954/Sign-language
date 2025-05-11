@@ -32,6 +32,7 @@ Route::post("contact/create",[ContactController::class,'create']);
 Route::put("contact/update/{id}",[ContactController::class,'update']);
 Route::delete("contact/delete/{id}",[ContactController::class,'delete']);
 
+
 //Emergency
 Route::get("emergency",[EmergencyController::class,"all"]);
 Route::get("emergency/{id}",[EmergencyController::class,"show"]);
@@ -41,12 +42,17 @@ Route::get("dictionary/{category}",[DictionaryController::class,"all"]);
 Route::get("dictionary/detail/{id}",[DictionaryController::class,"show"]);
 
 
+
+
 Route::post('/logout',[AuthController::class,'logout']);
 Route::put("edit_profile",[ProfileController::class,'edit']);
 
 
 
+
+
 });
+
 
 
 
