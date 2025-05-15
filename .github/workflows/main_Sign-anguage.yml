@@ -64,4 +64,4 @@ jobs:
           app-name: 'Sign-anguage'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.__publishingprofilesecretname__ }}
+          publish-profile: ${{ secrets.publishingprofilesecretname }}
