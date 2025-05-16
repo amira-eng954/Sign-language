@@ -14,7 +14,7 @@ class DictionaryController extends Controller
         $dictionary=Dictionary::where('category','=',$category)->get();
         $dictionary=$dictionary->map(function($item)
         {
-            $item->media_path="https://sign-anguage-dmf5fvf9d6ffg9b6.uaenorth-01.azurewebsites.net/$item->media_path";
+            $item->media_path="https://sign-anguage-dmf5fvf9d6ffg9b6.uaenorth-01.azurewebsites.net/public/$item->media_path";
             return $item;
 
         });
@@ -28,7 +28,7 @@ class DictionaryController extends Controller
         $one=Dictionary::find($id);
       
         if($one){
-           $one->media_path = "https://sign-anguage-dmf5fvf9d6ffg9b6.uaenorth-01.azurewebsites.net/$one->media_path";
+           $one->media_path = "https://sign-anguage-dmf5fvf9d6ffg9b6.uaenorth-01.azurewebsites.net/public/$one->media_path";
            
         return response()->json([
            
