@@ -15,7 +15,7 @@ class DictionaryController extends Controller
         $dictionary=$dictionary->map(function($item)
 
         {
-            $item->media_path="https://sign-anguage-dmf5fvf9d6ffg9b6.scm.uaenorth-01.azurewebsites.net/wwwroot/public/{$item->media_path}";
+            $item->media_path="https://signlanguage.blob.core.windows.net/upload/{$item->media_path}";
             return $item;
 
         });
@@ -29,7 +29,7 @@ class DictionaryController extends Controller
         $one=Dictionary::find($id);
       
         if($one){
-           $one->media_path = "https://sign-anguage-dmf5fvf9d6ffg9b6.scm.uaenorth-01.azurewebsites.net/wwwroot/public/{$one->media_path}";
+           $one->media_path = "https://signlanguage.blob.core.windows.net/upload/{$one->media_path}";
            
         return response()->json([
            
