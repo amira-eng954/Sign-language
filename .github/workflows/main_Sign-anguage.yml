@@ -74,6 +74,7 @@ jobs:
         with:
           app-name: 'signlanguage'
           slot-name: 'Production'
-          package: .
           publish-profile: ${{ secrets.publishingprofilesecretname }}
+          package: .
+         
           
