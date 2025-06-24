@@ -33,7 +33,7 @@ Route::put("contact/update/{id}",[ContactController::class,'update']);
 Route::delete("contact/delete/{id}",[ContactController::class,'delete']);
 
 
-
+//
 
 Route::post('/logout',[AuthController::class,'logout']);
 Route::put("edit_profile",[ProfileController::class,'edit']);
