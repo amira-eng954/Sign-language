@@ -24,7 +24,7 @@ Route::get('/user', function (Request $request) {
 
 
 
-// contacts crud
+//// contacts crud
 Route::middleware('firebase')->group(function () {
 Route::get("contact",[ContactController::class,'all']);
 Route::get("contact/{id}",[ContactController::class,'show']);
