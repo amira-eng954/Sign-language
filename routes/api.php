@@ -54,6 +54,15 @@ Route::get("dictionary/{category}",[DictionaryController::class,"all"]);
 Route::get("dictionary/detail/{id}",[DictionaryController::class,"show"]);
 
 
+Route::middleware('firebase')->get('/check-token', function (Request $request) {
+    return response()->json([
+        'uid' => $request->firebase_uid,
+        'message' => 'Token valid 🎉',
+    ]);
+});
+
+
+
 
 
 
