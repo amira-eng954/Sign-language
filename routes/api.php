@@ -18,7 +18,7 @@ Route::get('/user', function (Request $request) {
 
 
 
-// login register
+// /login register
  Route::post('/register',[AuthController::class,'register']);
  Route::post('/login',[AuthController::class,'login']);
 
